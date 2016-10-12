@@ -1,7 +1,7 @@
 var path = require('path');
 var webpack = require('webpack');
 var port = process.env.PORT || 3000;
-console.log(port);
+
 
 var config = {
   cache: true,
@@ -35,12 +35,6 @@ var config = {
   resolve: {
     extensions: ['', '.ts', '.js', '.json'],
     modulesDirectories: ['node_modules']
-  },
-
-  devServer: {
-    historyApiFallback: true,
-    watchOptions: { aggregateTimeout: 300, poll: 1000 },
-	port: port
   },
 
   node: {
