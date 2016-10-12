@@ -9,7 +9,7 @@ export class ApiService {
 		'Accept': 'application/json'
 	});
 
-	url: string = 'http://localhost:8080';
+	url: string = 'http://notter-server.herokuapp.com';
 
 	constructor(private http: Http){}
 
