@@ -1,6 +1,7 @@
 var path = require('path');
 var webpack = require('webpack');
 var port = process.env.PORT || 3000;
+console.log(port);
 
 var config = {
   cache: true,
