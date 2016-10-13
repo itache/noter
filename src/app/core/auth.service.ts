@@ -18,10 +18,15 @@ export class AuthService implements CanActivate {
 		private storeHelper: StoreHelper,
 		private store: Store
 		) {
-		const token = window.localStorage.getItem(this.JWT_KEY);
+				const token = window.localStorage.getItem(this.JWT_KEY);
     	if (token) {
-      		this.setJwt(token);
+      		this.setJwt(token);      			
     	}
+	}
+
+	getCurrent() {
+		return this.apiService.get('/users/me')
+			.do(res => this.storeHelper.update('user', res));
 	}
 
 	setJwt(jwt: string) {

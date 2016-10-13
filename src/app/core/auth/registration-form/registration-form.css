@@ -1,5 +1,8 @@
 .error {
 	color: red;
     font-size: .9em;
-    margin-top: -.5em;
+}
+
+.error p {
+	margin: .1em
 }

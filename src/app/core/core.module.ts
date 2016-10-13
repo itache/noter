@@ -11,7 +11,7 @@ import { AboutComponent } from './about/about.component';
 import { AuthComponent} from './auth/auth.component';
 import { LoginFormComponent} from './auth/login-form/login-form.component';
 import { RegistrationFormComponent} from './auth/registration-form/registration-form.component';
-import { AppBarComponent } from './app-bar/app-bar.component';
+import { UserDetailsComponent } from './user-details/user-details.component';
 import { AuthService } from './auth.service';
 
 @NgModule({
@@ -23,8 +23,8 @@ import { AuthService } from './auth.service';
       CommonModule,
    	MaterialModule.forRoot()
    	],
-   exports: 	    [ AboutComponent, AuthComponent, AppBarComponent],
-   declarations:   [ AboutComponent, AuthComponent, AppBarComponent, LoginFormComponent, RegistrationFormComponent],
+   exports: 	    [ AboutComponent, AuthComponent, UserDetailsComponent],
+   declarations:   [ AboutComponent, AuthComponent, UserDetailsComponent, LoginFormComponent, RegistrationFormComponent],
    providers:      [ AuthService, CookieService ],
    schemas:        [ CUSTOM_ELEMENTS_SCHEMA ]    
 })
